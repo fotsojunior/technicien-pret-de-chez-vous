@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FJ-Tech : trouvez des techniciens et des professionnels près de chez vous.">
+    <title>FJ-Tech | Trouvez votre technicien</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px #0000000d;
+        }
+
+        .logo {
+            color: #1264e8;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #172033;
+        }
+
+        .account {
+            background: #1264e8;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b3c91, #1479ef);
+            color: white;
+            padding: 55px 6%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .search {
+            display: flex;
+            max-width: 550px;
+            margin: auto;
+            background: white;
+            padding: 6px;
+            border-radius: 10px;
+            gap: 8px;
+        }
+
+        .search input {
+            flex: 1;
+            min-width: 0;
+            border: none;
+            outline: none;
+            padding: 12px;
+            font-size: 15px;
+        }
+
+        .search button {
+            border: none;
+            background: #1264e8;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 5%;
+        }
+
+        .section-title {
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .category {
+            background: white;
+            padding: 23px 12px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e5eaf2;
+        }
+
+        .category .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .category h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .category p {
+            color: #667085;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .welcome {
+            margin-top: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            border-left: 4px solid #1264e8;
+            line-height: 1.7;
+        }
+
+        .welcome h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #172033;
+            color: white;
+            padding: 25px 15px;
+            margin-top: 30px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 5%;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .account {
+                padding: 9px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">FJ-<span>Tech</span></div>
+        <a class="account" href="#compte">Mon compte</a>
+    </header>
+
+    <section class="hero">
+        <h1>Le bon technicien, au bon endroit.</h1>
+        <p>
+            Trouvez des techniciens qualifiés, découvrez des entreprises
+            et accédez aux services dont vous avez besoin.
+        </p>
+
+        <form class="search" id="searchForm">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Ex. : plombier, électricien..."
+                aria-label="Rechercher un professionnel"
+            >
+            <button type="submit">Rechercher</button>
+        </form>
+    </section>
+
+    <main>
+        <h2 class="section-title">Nos catégories de services</h2>
+
+        <section class="categories">
+            <article class="category">
+                <div class="icon">🔧</div>
+                <h3>Plomberie</h3>
+                <p>Installation et dépannage.</p>
+            </article>
+
+            <article class="category">
+                <div class="icon">⚡</div>
+                <h3>Électricité</h3>
+                <p>Installations et réparations.</p>
+            </article>
+
+            <article class="category">
+                <div class="icon">🧱</div>
+                <h3>Maçonnerie</h3>
+                <p>Construction et rénovation.</p>
+            </article>
+
+            <article class="category">
+                <div class="icon">❄️</div>
+                <h3>Climatisation</h3>
+                <p>Installation et entretien.</p>
+            </article>
+
+            <article class="category">
+                <div class="icon">🎨</div>
+                <h3>Peinture</h3>
+                <p>Finitions et décoration.</p>
+            </article>
+
+            <article class="category">
+                <div class="icon">🏢</div>
+                <h3>Entreprises</h3>
+                <p>Découvrez des professionnels.</p>
+            </article>
+        </section>
+
+        <section class="welcome" id="compte">
+            <h2>Bienvenue sur FJ-Tech !</h2>
+            <p>
+                Notre objectif : rapprocher les clients, les techniciens
+                et les entreprises, partout où ils se trouvent.
+            </p>
+            <p>
+                Cette première version est une maquette.
+                Les comptes utilisateurs et les recherches réelles
+                seront ajoutés dans les prochaines étapes.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>FJ-Tech</strong> — La technologie au service des professionnels.</p>
+        <p>© 2026 FJ-Tech. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const searchValue = document
+                .getElementById("searchInput")
+                .value.trim();
+
+            if (searchValue === "") {
+                alert("Écris le métier que tu recherches.");
+                return;
+            }
+
+            alert("Recherche : " + searchValue +
+                ". La recherche réelle sera connectée dans une prochaine étape.");
+        });
+    </script>
+
+</body>
+  </html>
